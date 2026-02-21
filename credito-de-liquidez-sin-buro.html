@@ -50,10 +50,14 @@ img{max-width:100%;height:auto;display:block}
 
 /* HEADER */
 .site-header{border-bottom:1px solid var(--c-border);background:var(--c-surface);padding:1rem 1.5rem}
-.site-header-inner{max-width:var(--w-wide);margin:0 auto;display:flex;align-items:center;justify-content:space-between}
-.site-logo{font-family:var(--serif);font-size:1.25rem;color:var(--c-text);text-decoration:none;letter-spacing:.01em}
+.site-header-inner{max-width:var(--w-wide);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.site-logo{font-family:var(--serif);font-size:1.25rem;color:var(--c-text);text-decoration:none;letter-spacing:.01em;flex-shrink:0}
 .site-logo span{color:var(--c-accent)}
-.site-tag{font-size:.75rem;color:var(--c-text-muted);letter-spacing:.04em;text-transform:uppercase;font-weight:500}
+.site-nav{display:flex;gap:1.5rem;align-items:center}
+.site-nav a{font-size:.85rem;color:var(--c-text-secondary);text-decoration:none;transition:color .15s;white-space:nowrap}
+.site-nav a:hover{color:var(--c-accent)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:.25rem;color:var(--c-text)}
+.nav-toggle svg{width:1.5rem;height:1.5rem}
 
 /* HERO */
 .hero{max-width:var(--w-wide);margin:0 auto;padding:3.5rem 1.5rem 2.5rem}
@@ -124,10 +128,14 @@ img{max-width:100%;height:auto;display:block}
 .faq-answer{font-size:1rem;color:var(--c-text-secondary);line-height:1.75}
 
 /* FOOTER */
-.site-footer{border-top:1px solid var(--c-border);background:var(--c-surface);padding:2rem 1.5rem;margin-top:2rem}
-.footer-inner{max-width:var(--w-wide);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
-.footer-text{font-size:.85rem;color:var(--c-text-muted)}
-.footer-updated{font-size:.8rem;color:var(--c-text-muted)}
+.site-footer{border-top:1px solid var(--c-border);background:var(--c-surface);padding:2.5rem 1.5rem;margin-top:2rem}
+.footer-inner{max-width:var(--w-wide);margin:0 auto}
+.footer-nav{display:flex;gap:1.5rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.footer-nav a{font-size:.875rem;color:var(--c-text-secondary);text-decoration:none;transition:color .15s}
+.footer-nav a:hover{color:var(--c-accent)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;padding-top:1rem;border-top:1px solid var(--c-border-light)}
+.footer-text{font-size:.8rem;color:var(--c-text-muted)}
+.footer-updated{font-size:.75rem;color:var(--c-text-muted)}
 
 /* BREADCRUMB */
 .breadcrumb{font-size:.8rem;color:var(--c-text-muted);margin-bottom:.5rem}
@@ -152,6 +160,11 @@ img{max-width:100%;height:auto;display:block}
 .hero h1{font-size:1.75rem}
 .key-facts-grid{grid-template-columns:1fr}
 .back-to-top{bottom:1.25rem;right:1.25rem}
+.site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--c-surface);border-bottom:1px solid var(--c-border);flex-direction:column;padding:1rem 1.5rem;gap:.75rem}
+.site-nav.open{display:flex}
+.site-header{position:relative}
+.nav-toggle{display:block}
+.footer-nav{flex-direction:column;gap:.75rem}
 }
 </style>
 
@@ -243,7 +256,14 @@ img{max-width:100%;height:auto;display:block}
 <header class="site-header">
   <div class="site-header-inner">
     <a href="/" class="site-logo">crédito<span>de</span>liquidez<span>.com</span></a>
-    <span class="site-tag">Guía informativa</span>
+    <button class="nav-toggle" aria-label="Menú" onclick="document.querySelector('.site-nav').classList.toggle('open')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <nav class="site-nav">
+      <a href="/credito-de-liquidez-sin-buro">Sin buró</a>
+      <a href="/credito-con-garantia-hipotecaria">Garantía hipotecaria</a>
+      <a href="/sofom-vs-banco">SOFOM vs Banco</a>
+    </nav>
   </div>
 </header>
 
@@ -592,8 +612,16 @@ img{max-width:100%;height:auto;display:block}
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <p class="footer-text">creditodeliquidez.com — Información objetiva sobre créditos con garantía hipotecaria en México. Este sitio es meramente informativo y no constituye asesoría financiera.</p>
-    <p class="footer-updated">Última actualización: febrero 2026</p>
+    <nav class="footer-nav">
+      <a href="/">Guía completa</a>
+      <a href="/credito-de-liquidez-sin-buro">Crédito sin buró</a>
+      <a href="/credito-con-garantia-hipotecaria">Garantía hipotecaria</a>
+      <a href="/sofom-vs-banco">SOFOM vs Banco</a>
+    </nav>
+    <div class="footer-bottom">
+      <p class="footer-text">creditodeliquidez.com — Información objetiva sobre créditos con garantía hipotecaria en México. Este sitio es meramente informativo y no constituye asesoría financiera.</p>
+      <p class="footer-updated">Última actualización: febrero 2026</p>
+    </div>
   </div>
 </footer>
 
