@@ -157,16 +157,16 @@ img{max-width:100%;height:auto;display:block}
 .mg .mg-particles{position:absolute;inset:0;pointer-events:none}
 .mg .mg-particle{position:absolute;width:2px;height:2px;background:#d4a853;border-radius:50%;opacity:0;animation:mg-float linear infinite}
 @keyframes mg-float{0%{opacity:0;transform:translateY(520px)}10%{opacity:.5}90%{opacity:.5}100%{opacity:0;transform:translateY(-20px)}}
-.mg .mg-scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;padding:32px 24px;font-family:'Outfit',sans-serif;color:#f1f5f9}
+.mg .mg-scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;padding:20px 24px;font-family:'Outfit',sans-serif;color:#f1f5f9}
 .mg .mg-scene.active{pointer-events:auto}
 .mg h1.mg-seo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 /* Scene 1 */
-.mg .mg-s1-logo{width:64px;height:64px;border:2.5px solid #d4a853;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;opacity:0;transform:scale(.5) rotate(-10deg)}
-.mg .mg-s1-logo svg{width:32px;height:32px;fill:#d4a853}
-.mg .mg-s1-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,56px);line-height:1.1;text-align:center;overflow:hidden}
+.mg .mg-s1-logo{width:72px;height:72px;border:2.5px solid #d4a853;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;opacity:0;transform:scale(.5) rotate(-10deg)}
+.mg .mg-s1-logo svg{width:36px;height:36px;fill:#d4a853}
+.mg .mg-s1-title{font-family:'DM Serif Display',serif;font-size:clamp(38px,7vw,72px);line-height:1.05;text-align:center;overflow:hidden}
 .mg .mg-s1-title span{display:inline-block;transform:translateY(120%)}
 .mg .mg-s1-accent{color:#d4a853}
-.mg .mg-s1-sub{margin-top:18px;font-size:clamp(12px,1.8vw,17px);color:#94a3b8;letter-spacing:3px;text-transform:uppercase;opacity:0;transform:translateY(20px)}
+.mg .mg-s1-sub{margin-top:14px;font-size:clamp(14px,2vw,20px);color:#94a3b8;letter-spacing:4px;text-transform:uppercase;opacity:0;transform:translateY(20px)}
 /* Scene 2 */
 .mg .mg-s2-q{font-family:'DM Serif Display',serif;font-size:clamp(22px,4vw,44px);text-align:center;line-height:1.3;opacity:0;transform:translateY(30px)}
 .mg .mg-s2-q em{color:#d4a853;font-style:italic}
@@ -183,25 +183,15 @@ img{max-width:100%;height:auto;display:block}
 .mg .mg-s4-card{background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid rgba(212,168,83,.15);border-radius:14px;padding:20px 16px;text-align:center;opacity:0;transform:translateY(30px) scale(.95)}
 .mg .mg-s4-val{font-family:'DM Serif Display',serif;font-size:clamp(18px,2.8vw,28px);color:#f0d48a;margin-bottom:4px}
 .mg .mg-s4-desc{font-size:12px;color:#94a3b8;line-height:1.3}
-/* Scene 5 */
-.mg .mg-s5-title{font-family:'DM Serif Display',serif;font-size:clamp(20px,3vw,34px);text-align:center;margin-bottom:28px;opacity:0;transform:translateY(24px)}
-.mg .mg-s5-vs{display:flex;align-items:center;gap:24px;max-width:700px;width:100%}
-.mg .mg-s5-card{flex:1;border-radius:16px;padding:24px 20px;text-align:center;opacity:0}
-.mg .mg-s5-bank{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transform:translateX(-50px)}
-.mg .mg-s5-sofom{background:linear-gradient(145deg,rgba(212,168,83,.1),rgba(212,168,83,.03));border:1px solid rgba(212,168,83,.2);transform:translateX(50px)}
-.mg .mg-s5-lbl{font-weight:700;font-size:18px;margin-bottom:14px}
-.mg .mg-s5-sofom .mg-s5-lbl{color:#d4a853}
-.mg .mg-s5-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;color:#94a3b8}
-.mg .mg-s5-row:last-child{border:none}
-.mg .mg-s5-row span:last-child{color:#f1f5f9;font-weight:600}
-.mg .mg-s5-div{font-family:'DM Serif Display',serif;font-size:24px;color:#d4a853;opacity:0;transform:scale(0);flex-shrink:0}
-/* Scene 6 */
-.mg .mg-s6-domain{font-family:'DM Serif Display',serif;font-size:clamp(26px,5vw,56px);text-align:center;opacity:0;transform:scale(.9)}
-.mg .mg-s6-dot{color:#d4a853}
-.mg .mg-s6-tag{margin-top:16px;font-size:clamp(13px,1.6vw,18px);color:#94a3b8;text-align:center;opacity:0;transform:translateY(16px);max-width:440px;line-height:1.5}
-.mg .mg-s6-bar{margin-top:28px;display:flex;gap:12px;opacity:0;transform:translateY(16px)}
-.mg .mg-s6-pill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:10px 20px;font-size:13px;color:#94a3b8}
-.mg .mg-s6-pill.gold{background:linear-gradient(135deg,#b8893a,#d4a853);border:none;color:#0a0e17;font-weight:700}
+/* Scene 5 - Compact table */
+.mg .mg-s5-title{font-family:'DM Serif Display',serif;font-size:clamp(22px,3.5vw,36px);text-align:center;margin-bottom:20px;opacity:0;transform:translateY(24px)}
+.mg .mg-s5-table{max-width:600px;width:100%;border-radius:14px;overflow:hidden;border:1px solid rgba(212,168,83,.15);opacity:0;transform:translateY(20px)}
+.mg .mg-s5-thead{display:grid;grid-template-columns:1fr 1fr 1fr;background:rgba(212,168,83,.1)}
+.mg .mg-s5-thead span{padding:10px 14px;font-size:clamp(11px,1.3vw,14px);font-weight:700;color:#d4a853;text-transform:uppercase;letter-spacing:1px}
+.mg .mg-s5-thead span:first-child{color:#94a3b8;font-weight:600}
+.mg .mg-s5-trow{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.06)}
+.mg .mg-s5-trow span{padding:9px 14px;font-size:clamp(12px,1.3vw,15px);color:#94a3b8}
+.mg .mg-s5-trow span:not(:first-child){color:#f1f5f9;font-weight:500}
 /* Progress */
 .mg .mg-progress{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10}
 .mg .mg-dot{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);cursor:pointer;transition:all .4s;border:none;padding:0}
@@ -222,9 +212,8 @@ img{max-width:100%;height:auto;display:block}
 .nav-toggle{display:block}
 .footer-nav{flex-direction:column;gap:.75rem}
 .mg{height:420px}
-.mg .mg-s4-grid{grid-template-columns:repeat(2,1fr)}
-.mg .mg-s5-vs{flex-direction:column;gap:12px}
-.mg .mg-s6-bar{flex-wrap:wrap;justify-content:center}
+.mg .mg-s1-logo{width:56px;height:56px;margin-bottom:14px}
+.mg .mg-s1-logo svg{width:28px;height:28px}
 }
 </style>
 
@@ -384,47 +373,14 @@ img{max-width:100%;height:auto;display:block}
   </div>
 
   <div class="mg-scene mg-scene-4" data-mg="4">
-    <div class="mg-s4-label">Datos clave</div>
-    <div class="mg-s4-grid">
-      <div class="mg-s4-card"><div class="mg-s4-val">9% – 28%</div><div class="mg-s4-desc">Tasa anual</div></div>
-      <div class="mg-s4-card"><div class="mg-s4-val">33% – 75%</div><div class="mg-s4-desc">Del valor de tu propiedad</div></div>
-      <div class="mg-s4-card"><div class="mg-s4-val">$500K+</div><div class="mg-s4-desc">Monto mínimo MXN</div></div>
-      <div class="mg-s4-card"><div class="mg-s4-val">1 – 20</div><div class="mg-s4-desc">Años de plazo</div></div>
-      <div class="mg-s4-card"><div class="mg-s4-val">2 – 8</div><div class="mg-s4-desc">Semanas de proceso</div></div>
-      <div class="mg-s4-card"><div class="mg-s4-val">3 tipos</div><div class="mg-s4-desc">Bancos, SOFOMs, Fintechs</div></div>
-    </div>
-  </div>
-
-  <div class="mg-scene mg-scene-5" data-mg="5">
     <div class="mg-s5-title">¿Banco o SOFOM?</div>
-    <div class="mg-s5-vs">
-      <div class="mg-s5-card mg-s5-bank">
-        <div class="mg-s5-lbl">Banco</div>
-        <div class="mg-s5-row"><span>Tasa</span><span>9% – 18%</span></div>
-        <div class="mg-s5-row"><span>Buró</span><span>Indispensable</span></div>
-        <div class="mg-s5-row"><span>Ingresos</span><span>Formales</span></div>
-        <div class="mg-s5-row"><span>Propiedad</span><span>Solo residencial</span></div>
-        <div class="mg-s5-row"><span>Tiempo</span><span>4 – 8 sem</span></div>
-      </div>
-      <div class="mg-s5-div">vs</div>
-      <div class="mg-s5-card mg-s5-sofom">
-        <div class="mg-s5-lbl">SOFOM</div>
-        <div class="mg-s5-row"><span>Tasa</span><span>15% – 28%</span></div>
-        <div class="mg-s5-row"><span>Buró</span><span>Flexible</span></div>
-        <div class="mg-s5-row"><span>Ingresos</span><span>Flexibles</span></div>
-        <div class="mg-s5-row"><span>Propiedad</span><span>Cualquier tipo</span></div>
-        <div class="mg-s5-row"><span>Tiempo</span><span>2 – 4 sem</span></div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mg-scene mg-scene-6" data-mg="6">
-    <div class="mg-s6-domain">creditodeliquidez<span class="mg-s6-dot">.</span>com</div>
-    <div class="mg-s6-tag">Información objetiva sobre créditos con garantía hipotecaria en México. Sin vender nada.</div>
-    <div class="mg-s6-bar">
-      <div class="mg-s6-pill">Requisitos</div>
-      <div class="mg-s6-pill">Costos reales</div>
-      <div class="mg-s6-pill gold">Compara opciones ↓</div>
+    <div class="mg-s5-table">
+      <div class="mg-s5-thead"><span></span><span>Banco</span><span>SOFOM</span></div>
+      <div class="mg-s5-trow"><span>Tasa</span><span>9 – 18%</span><span>15 – 28%</span></div>
+      <div class="mg-s5-trow"><span>Buró</span><span>Obligatorio</span><span>Flexible</span></div>
+      <div class="mg-s5-trow"><span>Ingresos</span><span>Formales</span><span>Flexibles</span></div>
+      <div class="mg-s5-trow"><span>Propiedad</span><span>Residencial</span><span>Cualquiera</span></div>
+      <div class="mg-s5-trow"><span>Tiempo</span><span>4 – 8 sem</span><span>2 – 4 sem</span></div>
     </div>
   </div>
 
@@ -843,7 +799,7 @@ img{max-width:100%;height:auto;display:block}
   // Motion Graphic Hero
   var mgEl=document.getElementById('mgHero');
   if(mgEl){
-    var MG_TOTAL=6,mgCurrent=0,mgTimer=null;
+    var MG_TOTAL=4,mgCurrent=0,mgTimer=null;
     var mgPart=document.getElementById('mgParticles');
     for(var i=0;i<20;i++){
       var p=document.createElement('div');
@@ -890,19 +846,8 @@ img{max-width:100%;height:auto;display:block}
         mgAnim(sc.querySelector('.mg-s3-desc'),{opacity:'1',transform:'translateY(0)'},500,800);
       }
       if(n===4){
-        mgAnim(sc.querySelector('.mg-s4-label'),{opacity:'1'},400,200);
-        sc.querySelectorAll('.mg-s4-card').forEach(function(c,i){mgAnim(c,{opacity:'1',transform:'translateY(0) scale(1)'},400,400+i*100)});
-      }
-      if(n===5){
         mgAnim(sc.querySelector('.mg-s5-title'),{opacity:'1',transform:'translateY(0)'},500,200);
-        mgAnim(sc.querySelector('.mg-s5-bank'),{opacity:'1',transform:'translateX(0)'},600,450);
-        mgAnim(sc.querySelector('.mg-s5-div'),{opacity:'1',transform:'scale(1)'},400,600);
-        mgAnim(sc.querySelector('.mg-s5-sofom'),{opacity:'1',transform:'translateX(0)'},600,700);
-      }
-      if(n===6){
-        mgAnim(sc.querySelector('.mg-s6-domain'),{opacity:'1',transform:'scale(1)'},700,200);
-        mgAnim(sc.querySelector('.mg-s6-tag'),{opacity:'1',transform:'translateY(0)'},500,600);
-        mgAnim(sc.querySelector('.mg-s6-bar'),{opacity:'1',transform:'translateY(0)'},500,900);
+        mgAnim(sc.querySelector('.mg-s5-table'),{opacity:'1',transform:'translateY(0)'},600,450);
       }
     }
     function mgNext(){mgCurrent=(mgCurrent+1)%MG_TOTAL;mgShow(mgCurrent);mgRestart()}
