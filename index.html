@@ -49,7 +49,7 @@ body{font-family:var(--sans);color:var(--c-text);background:var(--c-bg);line-hei
 img{max-width:100%;height:auto;display:block}
 
 /* HEADER */
-.site-header{border-bottom:1px solid var(--c-border);background:var(--c-surface);padding:1rem 1.5rem}
+.site-header{border-bottom:1px solid var(--c-border);background:var(--c-surface);padding:1rem 1.5rem;position:relative;z-index:50}
 .site-header-inner{max-width:var(--w-wide);margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
 .site-logo{font-family:var(--serif);font-size:1.25rem;color:var(--c-text);text-decoration:none;letter-spacing:.01em;flex-shrink:0}
 .site-logo span{color:var(--c-accent)}
@@ -66,7 +66,7 @@ img{max-width:100%;height:auto;display:block}
 .hero-subtitle{font-size:1.2rem;color:var(--c-text-secondary);max-width:620px;line-height:1.7}
 
 /* CONTENT */
-.content{max-width:var(--w-wide);margin:0 auto;padding:0 1.5rem 4rem}
+.content{max-width:var(--w-wide);margin:0 auto;padding:2.5rem 1.5rem 4rem}
 .content-grid{display:grid;grid-template-columns:1fr 260px;gap:3rem;align-items:start}
 .main-content{min-width:0}
 
@@ -208,7 +208,6 @@ img{max-width:100%;height:auto;display:block}
 .back-to-top{bottom:1.25rem;right:1.25rem}
 .site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:var(--c-surface);border-bottom:1px solid var(--c-border);flex-direction:column;padding:1rem 1.5rem;gap:.75rem}
 .site-nav.open{display:flex}
-.site-header{position:relative}
 .nav-toggle{display:block}
 .footer-nav{flex-direction:column;gap:.75rem}
 .mg{height:420px}
