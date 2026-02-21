@@ -13,6 +13,12 @@
 <meta property="og:url" content="https://creditodeliquidez.com/">
 <meta property="og:locale" content="es_MX">
 <meta name="twitter:card" content="summary_large_image">
+<meta property="og:image" content="https://creditodeliquidez.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://creditodeliquidez.com/og-image.png">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap">
@@ -124,6 +130,15 @@ img{max-width:100%;height:auto;display:block}
 .breadcrumb a{color:var(--c-text-muted);text-decoration:none}
 .breadcrumb a:hover{color:var(--c-accent)}
 
+/* TOC ACTIVE */
+.toc a.active{color:var(--c-accent);border-left-color:var(--c-accent);font-weight:500}
+
+/* BACK TO TOP */
+.back-to-top{position:fixed;bottom:2rem;right:2rem;width:2.75rem;height:2.75rem;background:var(--c-accent);color:#fff;border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,background .15s;box-shadow:0 2px 8px rgba(0,0,0,.15);z-index:100}
+.back-to-top.visible{opacity:1;visibility:visible}
+.back-to-top:hover{background:var(--c-accent-hover)}
+.back-to-top svg{width:1.2rem;height:1.2rem}
+
 /* MOBILE */
 @media(max-width:800px){
 .content-grid{grid-template-columns:1fr}
@@ -132,6 +147,7 @@ img{max-width:100%;height:auto;display:block}
 .content{padding:0 1.25rem 3rem}
 .hero h1{font-size:1.75rem}
 .key-facts-grid{grid-template-columns:1fr}
+.back-to-top{bottom:1.25rem;right:1.25rem}
 }
 </style>
 
@@ -299,7 +315,7 @@ img{max-width:100%;height:auto;display:block}
       <article class="article">
 
         <h2 id="que-es">¿Qué es un crédito de liquidez?</h2>
-        <p>Un <strong>crédito de liquidez</strong> —también conocido como <strong>liquidez hipotecaria</strong>, <strong>crédito con garantía hipotecaria</strong> o <strong>préstamo con garantía inmobiliaria</strong>— es un financiamiento en el que utilizas una propiedad que ya es tuya como garantía para obtener dinero en efectivo.</p>
+        <p>Un <strong>crédito de liquidez</strong> —también conocido como <strong>liquidez hipotecaria</strong>, <strong><a href="/credito-con-garantia-hipotecaria">crédito con garantía hipotecaria</a></strong> o <strong>préstamo con garantía inmobiliaria</strong>— es un financiamiento en el que utilizas una propiedad que ya es tuya como garantía para obtener dinero en efectivo.</p>
         <p>A diferencia de un crédito hipotecario tradicional que sirve para comprar una vivienda, el crédito de liquidez te permite convertir el valor de un inmueble que ya posees en capital disponible. El dinero obtenido es de libre disposición: puedes usarlo para invertir en tu negocio, pagar deudas, adquirir activos, capital de trabajo o cualquier otro fin.</p>
         <p>Este tipo de financiamiento es una de las opciones más accesibles para empresarios y dueños de PyMEs que necesitan montos grandes (desde $500,000 hasta más de $8,000,000 MXN) y que cuentan con una propiedad. Al ofrecer un inmueble como respaldo, las tasas de interés son considerablemente más bajas que las de un crédito personal o empresarial sin garantía.</p>
 
@@ -448,7 +464,7 @@ img{max-width:100%;height:auto;display:block}
         </div>
 
         <div class="callout">
-          <strong>Si el banco te rechazó, no significa que no haya opciones.</strong> La razón más común de rechazo bancario es el historial en buró de crédito o la falta de comprobación formal de ingresos. Las SOFOMs reguladas por la CONDUSEF ofrecen créditos de liquidez con requisitos más flexibles precisamente porque la garantía hipotecaria reduce su riesgo. Las tasas serán mayores, pero es una alternativa legítima y regulada.
+          <strong>Si el banco te rechazó, no significa que no haya opciones.</strong> La razón más común de rechazo bancario es el historial en buró de crédito o la falta de comprobación formal de ingresos. Las SOFOMs reguladas por la CONDUSEF ofrecen créditos de liquidez con requisitos más flexibles precisamente porque la garantía hipotecaria reduce su riesgo. Las tasas serán mayores, pero es una alternativa legítima y regulada. Conoce más en nuestra guía de <a href="/credito-de-liquidez-sin-buro">crédito de liquidez sin buró</a>.
         </div>
 
         <h2 id="costos">Costos y tasas de interés</h2>
@@ -538,7 +554,7 @@ img{max-width:100%;height:auto;display:block}
         </div>
 
         <h2 id="banco-vs-sofom">Banco vs SOFOM: ¿Cuál conviene?</h2>
-        <p>No hay una respuesta universal. La mejor opción depende de tu perfil específico. Estas son las dos realidades del crédito de liquidez en México:</p>
+        <p>No hay una respuesta universal. La mejor opción depende de tu perfil específico. Hemos preparado una <a href="/sofom-vs-banco">comparativa detallada entre SOFOM y banco</a> con costos reales, pero aquí va el resumen:</p>
 
         <h3>El banco te conviene si:</h3>
         <p>Tienes buen historial en buró de crédito, puedes comprobar ingresos formalmente (nómina, declaraciones fiscales, constancias), tu propiedad es una casa o departamento habitacional, y no tienes urgencia de tiempo. A cambio obtendrás las tasas más bajas del mercado (desde 9% anual) y plazos largos de hasta 20 años.</p>
@@ -656,6 +672,43 @@ img{max-width:100%;height:auto;display:block}
     <p class="footer-updated">Última actualización: febrero 2026</p>
   </div>
 </footer>
+
+<button class="back-to-top" aria-label="Volver arriba">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+(function(){
+  // Back to top
+  var btn=document.querySelector('.back-to-top');
+  window.addEventListener('scroll',function(){
+    btn.classList.toggle('visible',window.scrollY>400);
+  },{passive:true});
+  btn.addEventListener('click',function(){
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+
+  // TOC active highlight
+  var tocLinks=document.querySelectorAll('.toc a');
+  var sections=[];
+  tocLinks.forEach(function(a){
+    var id=a.getAttribute('href').replace('#','');
+    var el=document.getElementById(id);
+    if(el) sections.push({el:el,link:a});
+  });
+  function updateTOC(){
+    var scrollPos=window.scrollY+120;
+    var current=null;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i].el.offsetTop<=scrollPos) current=sections[i];
+    }
+    tocLinks.forEach(function(a){a.classList.remove('active')});
+    if(current) current.link.classList.add('active');
+  }
+  window.addEventListener('scroll',updateTOC,{passive:true});
+  updateTOC();
+})();
+</script>
 
 </body>
 </html>
