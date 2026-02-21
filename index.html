@@ -21,9 +21,9 @@
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&family=Outfit:wght@300;400;600;700;800&display=swap"></noscript>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -147,6 +147,66 @@ img{max-width:100%;height:auto;display:block}
 .back-to-top:hover{background:var(--c-accent-hover)}
 .back-to-top svg{width:1.2rem;height:1.2rem}
 
+/* MOTION GRAPHIC HERO */
+.mg{position:relative;background:#0a0e17;overflow:hidden;height:520px}
+.mg *{box-sizing:border-box}
+.mg .mg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(212,168,83,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(212,168,83,0.03) 1px,transparent 1px);background-size:60px 60px}
+.mg .mg-glow{position:absolute;width:500px;height:500px;border-radius:50%;filter:blur(150px);opacity:.12}
+.mg .mg-glow-1{background:#d4a853;top:-200px;right:-200px}
+.mg .mg-glow-2{background:#38bdf8;bottom:-200px;left:-200px;opacity:.06}
+.mg .mg-particles{position:absolute;inset:0;pointer-events:none}
+.mg .mg-particle{position:absolute;width:2px;height:2px;background:#d4a853;border-radius:50%;opacity:0;animation:mg-float linear infinite}
+@keyframes mg-float{0%{opacity:0;transform:translateY(520px)}10%{opacity:.5}90%{opacity:.5}100%{opacity:0;transform:translateY(-20px)}}
+.mg .mg-scene{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;opacity:0;pointer-events:none;padding:32px 24px;font-family:'Outfit',sans-serif;color:#f1f5f9}
+.mg .mg-scene.active{pointer-events:auto}
+.mg h1.mg-seo{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+/* Scene 1 */
+.mg .mg-s1-logo{width:64px;height:64px;border:2.5px solid #d4a853;border-radius:14px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;opacity:0;transform:scale(.5) rotate(-10deg)}
+.mg .mg-s1-logo svg{width:32px;height:32px;fill:#d4a853}
+.mg .mg-s1-title{font-family:'DM Serif Display',serif;font-size:clamp(28px,5vw,56px);line-height:1.1;text-align:center;overflow:hidden}
+.mg .mg-s1-title span{display:inline-block;transform:translateY(120%)}
+.mg .mg-s1-accent{color:#d4a853}
+.mg .mg-s1-sub{margin-top:18px;font-size:clamp(12px,1.8vw,17px);color:#94a3b8;letter-spacing:3px;text-transform:uppercase;opacity:0;transform:translateY(20px)}
+/* Scene 2 */
+.mg .mg-s2-q{font-family:'DM Serif Display',serif;font-size:clamp(22px,4vw,44px);text-align:center;line-height:1.3;opacity:0;transform:translateY(30px)}
+.mg .mg-s2-q em{color:#d4a853;font-style:italic}
+.mg .mg-s2-pills{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;justify-content:center}
+.mg .mg-s2-pill{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:14px 20px;font-size:clamp(12px,1.4vw,15px);color:#94a3b8;opacity:0;transform:translateY(24px);display:flex;align-items:center;gap:10px}
+/* Scene 3 */
+.mg .mg-s3-badge{background:linear-gradient(135deg,#b8893a,#d4a853);color:#0a0e17;font-weight:700;font-size:12px;letter-spacing:3px;text-transform:uppercase;padding:7px 20px;border-radius:100px;margin-bottom:24px;opacity:0;transform:scale(.8)}
+.mg .mg-s3-title{font-family:'DM Serif Display',serif;font-size:clamp(24px,4.5vw,50px);text-align:center;line-height:1.15;opacity:0;transform:translateY(30px)}
+.mg .mg-s3-hl{background:linear-gradient(135deg,#d4a853,#f0d48a);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.mg .mg-s3-desc{margin-top:18px;font-size:clamp(13px,1.6vw,17px);color:#94a3b8;text-align:center;max-width:520px;line-height:1.6;opacity:0;transform:translateY(16px)}
+/* Scene 4 */
+.mg .mg-s4-label{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#d4a853;margin-bottom:28px;opacity:0}
+.mg .mg-s4-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:680px;width:100%}
+.mg .mg-s4-card{background:linear-gradient(145deg,rgba(255,255,255,.05),rgba(255,255,255,.01));border:1px solid rgba(212,168,83,.15);border-radius:14px;padding:20px 16px;text-align:center;opacity:0;transform:translateY(30px) scale(.95)}
+.mg .mg-s4-val{font-family:'DM Serif Display',serif;font-size:clamp(18px,2.8vw,28px);color:#f0d48a;margin-bottom:4px}
+.mg .mg-s4-desc{font-size:12px;color:#94a3b8;line-height:1.3}
+/* Scene 5 */
+.mg .mg-s5-title{font-family:'DM Serif Display',serif;font-size:clamp(20px,3vw,34px);text-align:center;margin-bottom:28px;opacity:0;transform:translateY(24px)}
+.mg .mg-s5-vs{display:flex;align-items:center;gap:24px;max-width:700px;width:100%}
+.mg .mg-s5-card{flex:1;border-radius:16px;padding:24px 20px;text-align:center;opacity:0}
+.mg .mg-s5-bank{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);transform:translateX(-50px)}
+.mg .mg-s5-sofom{background:linear-gradient(145deg,rgba(212,168,83,.1),rgba(212,168,83,.03));border:1px solid rgba(212,168,83,.2);transform:translateX(50px)}
+.mg .mg-s5-lbl{font-weight:700;font-size:18px;margin-bottom:14px}
+.mg .mg-s5-sofom .mg-s5-lbl{color:#d4a853}
+.mg .mg-s5-row{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px;color:#94a3b8}
+.mg .mg-s5-row:last-child{border:none}
+.mg .mg-s5-row span:last-child{color:#f1f5f9;font-weight:600}
+.mg .mg-s5-div{font-family:'DM Serif Display',serif;font-size:24px;color:#d4a853;opacity:0;transform:scale(0);flex-shrink:0}
+/* Scene 6 */
+.mg .mg-s6-domain{font-family:'DM Serif Display',serif;font-size:clamp(26px,5vw,56px);text-align:center;opacity:0;transform:scale(.9)}
+.mg .mg-s6-dot{color:#d4a853}
+.mg .mg-s6-tag{margin-top:16px;font-size:clamp(13px,1.6vw,18px);color:#94a3b8;text-align:center;opacity:0;transform:translateY(16px);max-width:440px;line-height:1.5}
+.mg .mg-s6-bar{margin-top:28px;display:flex;gap:12px;opacity:0;transform:translateY(16px)}
+.mg .mg-s6-pill{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:10px 20px;font-size:13px;color:#94a3b8}
+.mg .mg-s6-pill.gold{background:linear-gradient(135deg,#b8893a,#d4a853);border:none;color:#0a0e17;font-weight:700}
+/* Progress */
+.mg .mg-progress{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);display:flex;gap:6px;z-index:10}
+.mg .mg-dot{width:28px;height:3px;border-radius:2px;background:rgba(255,255,255,.15);cursor:pointer;transition:all .4s;border:none;padding:0}
+.mg .mg-dot.active{background:#d4a853;width:40px}
+
 /* MOBILE */
 @media(max-width:800px){
 .content-grid{grid-template-columns:1fr}
@@ -161,6 +221,10 @@ img{max-width:100%;height:auto;display:block}
 .site-header{position:relative}
 .nav-toggle{display:block}
 .footer-nav{flex-direction:column;gap:.75rem}
+.mg{height:420px}
+.mg .mg-s4-grid{grid-template-columns:repeat(2,1fr)}
+.mg .mg-s5-vs{flex-direction:column;gap:12px}
+.mg .mg-s6-bar{flex-wrap:wrap;justify-content:center}
 }
 </style>
 
@@ -289,13 +353,82 @@ img{max-width:100%;height:auto;display:block}
   </div>
 </header>
 
-<section class="hero">
-  <div class="breadcrumb">
-    <a href="/">Inicio</a> › Guía completa
+<section class="mg" id="mgHero">
+  <h1 class="mg-seo">Crédito de Liquidez en México: Qué es, cómo funciona y todas las opciones</h1>
+  <div class="mg-grid"></div>
+  <div class="mg-glow mg-glow-1"></div>
+  <div class="mg-glow mg-glow-2"></div>
+  <div class="mg-particles" id="mgParticles"></div>
+
+  <div class="mg-scene mg-scene-1" data-mg="1">
+    <div class="mg-s1-logo"><svg viewBox="0 0 24 24"><path d="M3 21V10l9-7 9 7v11a1 1 0 01-1 1h-5v-7H9v7H4a1 1 0 01-1-1z"/></svg></div>
+    <div class="mg-s1-title"><span>Crédito de</span></div>
+    <div class="mg-s1-title"><span class="mg-s1-accent">Liquidez</span></div>
+    <div class="mg-s1-sub">Guía Completa México 2026</div>
   </div>
-  <span class="hero-label">Actualizado febrero 2026</span>
-  <h1>Crédito de Liquidez en México: Qué es, cómo funciona y todas las opciones</h1>
-  <p class="hero-subtitle">Todo lo que necesitas saber sobre la liquidez hipotecaria: requisitos, costos, cuánto te prestan y las diferencias entre bancos y SOFOMs. Información objetiva, sin vender nada.</p>
+
+  <div class="mg-scene mg-scene-2" data-mg="2">
+    <div class="mg-s2-q">¿Tienes una propiedad y<br>necesitas <em>capital</em>?</div>
+    <div class="mg-s2-pills">
+      <div class="mg-s2-pill"><span>🏦</span> El banco te rechazó</div>
+      <div class="mg-s2-pill"><span>📋</span> Ingresos informales</div>
+      <div class="mg-s2-pill"><span>⏳</span> Necesitas rapidez</div>
+      <div class="mg-s2-pill"><span>🏢</span> Propiedad comercial</div>
+    </div>
+  </div>
+
+  <div class="mg-scene mg-scene-3" data-mg="3">
+    <div class="mg-s3-badge">La solución</div>
+    <div class="mg-s3-title">Convierte tu propiedad<br>en <span class="mg-s3-hl">capital disponible</span></div>
+    <div class="mg-s3-desc">Usa tu casa, departamento, local u oficina como garantía y obtén financiamiento de libre disposición.</div>
+  </div>
+
+  <div class="mg-scene mg-scene-4" data-mg="4">
+    <div class="mg-s4-label">Datos clave</div>
+    <div class="mg-s4-grid">
+      <div class="mg-s4-card"><div class="mg-s4-val">9% – 28%</div><div class="mg-s4-desc">Tasa anual</div></div>
+      <div class="mg-s4-card"><div class="mg-s4-val">33% – 75%</div><div class="mg-s4-desc">Del valor de tu propiedad</div></div>
+      <div class="mg-s4-card"><div class="mg-s4-val">$500K+</div><div class="mg-s4-desc">Monto mínimo MXN</div></div>
+      <div class="mg-s4-card"><div class="mg-s4-val">1 – 20</div><div class="mg-s4-desc">Años de plazo</div></div>
+      <div class="mg-s4-card"><div class="mg-s4-val">2 – 8</div><div class="mg-s4-desc">Semanas de proceso</div></div>
+      <div class="mg-s4-card"><div class="mg-s4-val">3 tipos</div><div class="mg-s4-desc">Bancos, SOFOMs, Fintechs</div></div>
+    </div>
+  </div>
+
+  <div class="mg-scene mg-scene-5" data-mg="5">
+    <div class="mg-s5-title">¿Banco o SOFOM?</div>
+    <div class="mg-s5-vs">
+      <div class="mg-s5-card mg-s5-bank">
+        <div class="mg-s5-lbl">Banco</div>
+        <div class="mg-s5-row"><span>Tasa</span><span>9% – 18%</span></div>
+        <div class="mg-s5-row"><span>Buró</span><span>Indispensable</span></div>
+        <div class="mg-s5-row"><span>Ingresos</span><span>Formales</span></div>
+        <div class="mg-s5-row"><span>Propiedad</span><span>Solo residencial</span></div>
+        <div class="mg-s5-row"><span>Tiempo</span><span>4 – 8 sem</span></div>
+      </div>
+      <div class="mg-s5-div">vs</div>
+      <div class="mg-s5-card mg-s5-sofom">
+        <div class="mg-s5-lbl">SOFOM</div>
+        <div class="mg-s5-row"><span>Tasa</span><span>15% – 28%</span></div>
+        <div class="mg-s5-row"><span>Buró</span><span>Flexible</span></div>
+        <div class="mg-s5-row"><span>Ingresos</span><span>Flexibles</span></div>
+        <div class="mg-s5-row"><span>Propiedad</span><span>Cualquier tipo</span></div>
+        <div class="mg-s5-row"><span>Tiempo</span><span>2 – 4 sem</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mg-scene mg-scene-6" data-mg="6">
+    <div class="mg-s6-domain">creditodeliquidez<span class="mg-s6-dot">.</span>com</div>
+    <div class="mg-s6-tag">Información objetiva sobre créditos con garantía hipotecaria en México. Sin vender nada.</div>
+    <div class="mg-s6-bar">
+      <div class="mg-s6-pill">Requisitos</div>
+      <div class="mg-s6-pill">Costos reales</div>
+      <div class="mg-s6-pill gold">Compara opciones ↓</div>
+    </div>
+  </div>
+
+  <div class="mg-progress" id="mgProgress"></div>
 </section>
 
 <div class="content">
@@ -704,6 +837,81 @@ img{max-width:100%;height:auto;display:block}
 <button class="back-to-top" aria-label="Volver arriba">
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
+
+<script>
+(function(){
+  // Motion Graphic Hero
+  var mgEl=document.getElementById('mgHero');
+  if(mgEl){
+    var MG_TOTAL=6,mgCurrent=0,mgTimer=null;
+    var mgPart=document.getElementById('mgParticles');
+    for(var i=0;i<20;i++){
+      var p=document.createElement('div');
+      p.className='mg-particle';
+      p.style.left=Math.random()*100+'%';
+      p.style.animationDuration=(8+Math.random()*10)+'s';
+      p.style.animationDelay=Math.random()*8+'s';
+      mgPart.appendChild(p);
+    }
+    var mgProg=document.getElementById('mgProgress');
+    for(var i=0;i<MG_TOTAL;i++){
+      var d=document.createElement('button');
+      d.className='mg-dot';
+      d.setAttribute('aria-label','Escena '+(i+1));
+      (function(idx){d.addEventListener('click',function(){mgGoTo(idx)})})(i);
+      mgProg.appendChild(d);
+    }
+    function mgAnim(el,props,dur,delay){
+      setTimeout(function(){
+        el.style.transition='all '+dur+'ms cubic-bezier(0.22,1,0.36,1)';
+        Object.keys(props).forEach(function(k){el.style[k]=props[k]});
+      },delay||0);
+    }
+    function mgShow(idx){
+      var scenes=mgEl.querySelectorAll('.mg-scene');
+      scenes.forEach(function(s){s.style.transition='opacity 0.4s';s.style.opacity='0';s.classList.remove('active')});
+      mgEl.querySelectorAll('.mg-dot').forEach(function(d,i){d.classList.toggle('active',i===idx)});
+      var sc=scenes[idx];
+      sc.classList.add('active');
+      setTimeout(function(){sc.style.transition='opacity 0.6s';sc.style.opacity='1'},80);
+      var n=idx+1;
+      if(n===1){
+        mgAnim(sc.querySelector('.mg-s1-logo'),{opacity:'1',transform:'scale(1) rotate(0deg)'},600,200);
+        sc.querySelectorAll('.mg-s1-title span').forEach(function(l,i){mgAnim(l,{transform:'translateY(0)'},600,400+i*180)});
+        mgAnim(sc.querySelector('.mg-s1-sub'),{opacity:'1',transform:'translateY(0)'},500,800);
+      }
+      if(n===2){
+        mgAnim(sc.querySelector('.mg-s2-q'),{opacity:'1',transform:'translateY(0)'},600,200);
+        sc.querySelectorAll('.mg-s2-pill').forEach(function(p,i){mgAnim(p,{opacity:'1',transform:'translateY(0)'},400,500+i*120)});
+      }
+      if(n===3){
+        mgAnim(sc.querySelector('.mg-s3-badge'),{opacity:'1',transform:'scale(1)'},500,200);
+        mgAnim(sc.querySelector('.mg-s3-title'),{opacity:'1',transform:'translateY(0)'},600,450);
+        mgAnim(sc.querySelector('.mg-s3-desc'),{opacity:'1',transform:'translateY(0)'},500,800);
+      }
+      if(n===4){
+        mgAnim(sc.querySelector('.mg-s4-label'),{opacity:'1'},400,200);
+        sc.querySelectorAll('.mg-s4-card').forEach(function(c,i){mgAnim(c,{opacity:'1',transform:'translateY(0) scale(1)'},400,400+i*100)});
+      }
+      if(n===5){
+        mgAnim(sc.querySelector('.mg-s5-title'),{opacity:'1',transform:'translateY(0)'},500,200);
+        mgAnim(sc.querySelector('.mg-s5-bank'),{opacity:'1',transform:'translateX(0)'},600,450);
+        mgAnim(sc.querySelector('.mg-s5-div'),{opacity:'1',transform:'scale(1)'},400,600);
+        mgAnim(sc.querySelector('.mg-s5-sofom'),{opacity:'1',transform:'translateX(0)'},600,700);
+      }
+      if(n===6){
+        mgAnim(sc.querySelector('.mg-s6-domain'),{opacity:'1',transform:'scale(1)'},700,200);
+        mgAnim(sc.querySelector('.mg-s6-tag'),{opacity:'1',transform:'translateY(0)'},500,600);
+        mgAnim(sc.querySelector('.mg-s6-bar'),{opacity:'1',transform:'translateY(0)'},500,900);
+      }
+    }
+    function mgNext(){mgCurrent=(mgCurrent+1)%MG_TOTAL;mgShow(mgCurrent);mgRestart()}
+    function mgGoTo(i){mgCurrent=i;mgShow(i);mgRestart()}
+    function mgRestart(){clearInterval(mgTimer);mgTimer=setInterval(mgNext,4500)}
+    mgShow(0);mgRestart();
+  }
+})();
+</script>
 
 <script>
 (function(){
